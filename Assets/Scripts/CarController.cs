@@ -3,8 +3,10 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public float speed = 15f;
-    public float turnSpeed = 80f;
+    public float turnSpeed = 120f;
     public float nitroSpeed = 30f;
+
+    public Joystick joystick;
 
     private Rigidbody rb;
     private AudioSource engineAudio;
@@ -20,8 +22,20 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        moveInput = Input.GetAxis("Vertical");
-        turnInput = Input.GetAxis("Horizontal");
+        float keyboardMove = Input.GetAxis("Vertical");
+        float keyboardTurn = Input.GetAxis("Horizontal");
+
+        float joystickMove = 0f;
+        float joystickTurn = 0f;
+
+        if (joystick != null)
+        {
+            joystickMove = joystick.Vertical;
+            joystickTurn = joystick.Horizontal;
+        }
+
+        moveInput = Mathf.Abs(joystickMove) > 0.1f ? joystickMove : keyboardMove;
+        turnInput = Mathf.Abs(joystickTurn) > 0.1f ? joystickTurn : keyboardTurn;
 
         if (engineAudio != null)
         {
@@ -42,7 +56,12 @@ public class CarController : MonoBehaviour
 
         if (Mathf.Abs(moveInput) > 0.1f)
         {
-            Quaternion turnRotation = Quaternion.Euler(0, turnInput * turnSpeed * Time.fixedDeltaTime, 0);
+            Quaternion turnRotation = Quaternion.Euler(
+                0,
+                turnInput * turnSpeed * Time.fixedDeltaTime,
+                0
+            );
+
             rb.MoveRotation(rb.rotation * turnRotation);
         }
     }
