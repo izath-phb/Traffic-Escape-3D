@@ -13,6 +13,7 @@ public class CarController : MonoBehaviour
 
     private float moveInput;
     private float turnInput;
+    private float currentSpeed;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? nitroSpeed : speed;
+        currentSpeed = NitroButton.nitroPressed ? nitroSpeed : speed;
 
         Vector3 moveVelocity = transform.forward * moveInput * currentSpeed;
         rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z);

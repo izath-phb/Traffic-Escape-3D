@@ -11,6 +11,7 @@ public class mobil : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float motorForce;
+    [SerializeField] private float nitroForce = 3000f;
     [SerializeField] private float breakForce;
     [SerializeField] private float maxSteerAngle;
 
@@ -44,8 +45,10 @@ public class mobil : MonoBehaviour
 
     private void HandleMotor()
     {
-        frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
-        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
+        float currentForce = NitroButton.nitroPressed ? nitroForce : motorForce;
+
+        frontLeftWheelCollider.motorTorque = verticalInput * currentForce;
+        frontRightWheelCollider.motorTorque = verticalInput * currentForce;
 
         currentbreakForce = isBreaking ? breakForce : 0f;
 
