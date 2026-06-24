@@ -1730,7 +1730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 112.38}
+  m_AnchoredPosition: {x: 263, y: 112.38}
   m_SizeDelta: {x: 80, y: 45.5679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046383030
@@ -3292,6 +3292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   pausePanel: {fileID: 2103892253}
   pauseButton: {fileID: 1046383028}
+  joystick: {fileID: 8114456642381105114}
+  nitroButton: {fileID: 1801009820}
 --- !u!4 &1887382699
 Transform:
   m_ObjectHideFlags: 0

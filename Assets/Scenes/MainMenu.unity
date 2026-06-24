@@ -2086,8 +2086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 148}
-  m_SizeDelta: {x: 859.5002, y: 129.5949}
+  m_AnchoredPosition: {x: 0.000030518, y: -17.621}
+  m_SizeDelta: {x: 1386.566, y: 479.814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867874685
 MonoBehaviour:
@@ -2109,7 +2109,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CARA BERMAIN
+  m_text: "1. Gunakan joystick untuk mengendalikan mobil.\n2. Tekan tombol Nitro
+    untuk menambah kecepatan.\n3. Kumpulkan koin sebanyak mungkin.\n4. Hindari rintangan
+    di jalan.\n5. Capai garis FINISH sebelum waktu habis.\n6. Raih skor tertinggi
+    dan selesaikan level.\n\n                           Selamat Bermain! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2136,14 +2139,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2313,7 +2316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 332.26398}
+  m_AnchoredPosition: {x: 14.00001, y: 306.11}
   m_SizeDelta: {x: 859.5002, y: 129.5949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101824243
